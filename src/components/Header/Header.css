@@ -1,0 +1,23 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.btn {
+    background-color: #CDCED3;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #DFE3EC;
+}
+
+.btn:active {
+    background-color: #CDCED3;
+}

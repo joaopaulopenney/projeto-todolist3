@@ -1,0 +1,32 @@
+.card {
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.295);
+    padding: 15px 10px 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.text {
+    word-break: break-all;
+    min-width: 100px;
+    max-width: 140px;
+    user-select: none;
+}
+
+.icon {
+   color: rgba(128, 128, 128, 0.247); 
+   border: none;
+   cursor: pointer;
+}
+
+.icon:hover {
+    color: rgba(128, 128, 128, 0.534);
+}
+
+.icon:active {
+    color: rgba(128, 128, 128, 0.247);
+}

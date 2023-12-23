@@ -1,0 +1,35 @@
+.cardboard {
+    background-color: #CDCED3;
+    padding: 15px;
+    margin: 8px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.226);
+}
+
+.cb-title {
+    color: white;
+    font-weight: bolder;
+    font-size: 22px;
+    margin: 8px 0 15px;
+}
+
+.cb-text {
+    margin-bottom: 15px;
+}
+
+.none {
+    display: none;
+}
+
+.blue {
+    background-color: #78C1FA;
+}
+
+.purple {
+    background-color: #8C5DCA;
+}
+
+.green {
+    background-color: #7BCC96;
+}
