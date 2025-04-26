@@ -35,6 +35,18 @@ const Home = () => {
       setCardBoards(cardBoardsArray);
     }
 
+    const deleteCardBoard = (id, idDel) => {
+      let cardBoardsArray = [...cardBoards];
+
+      for (let i in cardBoardsArray) {
+        if(cardBoardsArray[i].id == id) {
+          cardBoardsArray.splice(idDel, 1);
+        }
+      }
+
+      setCardBoards(cardBoardsArray);
+    }
+
     const moveCard = (id, fromIndex, toIndex) => {
       let cardBoardsArray = [...cardBoards];
 
@@ -87,9 +99,9 @@ const Home = () => {
     <>
       <Header addCardBoard={addCardBoard} />
       <section id="cardboards-list">
-        {cardBoards.map((cardBoard) => (
+        {cardBoards.map((cardBoard, index) => (
           <div key={cardBoard.id}>
-            <CardBoard cardBoard={cardBoard} addCard={addCard} deleteCard={deleteCard} moveCard={moveCard} moveCardBoardDialog={moveCardBoardDialog} editCard={editCard} />
+            <CardBoard cardBoard={cardBoard} idDel={index} addCard={addCard} deleteCard={deleteCard} deleteCardBoard={deleteCardBoard} moveCard={moveCard} moveCardBoardDialog={moveCardBoardDialog} editCard={editCard} />
           </div>
         ))}
       </section>

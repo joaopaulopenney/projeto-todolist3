@@ -7,6 +7,26 @@
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.226);
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconDel {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.iconDel:hover {
+    color: rgb(184, 184, 184);
+}
+
+.iconDel:active {
+    color: white;
+}
+
 .cb-title {
     color: white;
     font-weight: bolder;
