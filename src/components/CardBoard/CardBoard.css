@@ -27,11 +27,16 @@
     color: white;
 }
 
+.hideButton {
+    display: none;
+}
+
 .cb-title {
     color: white;
     font-weight: bolder;
     font-size: 22px;
     margin: 8px 0 15px;
+    user-select: none;
 }
 
 .cb-text {

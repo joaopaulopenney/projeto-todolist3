@@ -35,18 +35,6 @@ const Home = () => {
       setCardBoards(cardBoardsArray);
     }
 
-    const deleteCardBoard = (id, idDel) => {
-      let cardBoardsArray = [...cardBoards];
-
-      for (let i in cardBoardsArray) {
-        if(cardBoardsArray[i].id == id) {
-          cardBoardsArray.splice(idDel, 1);
-        }
-      }
-
-      setCardBoards(cardBoardsArray);
-    }
-
     const moveCard = (id, fromIndex, toIndex) => {
       let cardBoardsArray = [...cardBoards];
 
@@ -71,13 +59,36 @@ const Home = () => {
       setCardBoards(cardBoardsArray);
     }
 
+    const deleteCardBoard = (id, idDel) => {
+      let cardBoardsArray = [...cardBoards];
+
+      for (let i in cardBoardsArray) {
+        if(cardBoardsArray[i].id == id) {
+          cardBoardsArray.splice(idDel, 1);
+        }
+      }
+
+      setCardBoards(cardBoardsArray);
+    }
+
+    const editCardBoard = (id, editedText) => {
+      let cardBoardsArray = [...cardBoards];
+
+      for (let i in cardBoardsArray) {
+        if(cardBoardsArray[i].id == id) {
+          cardBoardsArray[i].title = editedText;
+        }
+      }
+
+      setCardBoards(cardBoardsArray);
+    }
+
     const moveToCardBoard = (itemId, text, toItems, fromItems, id) => {
       let cardBoardsArray = [...cardBoards];
 
       for (let i in cardBoardsArray) {
         if(cardBoardsArray[i].id == id) {
           toItems.push({text});
-          console.log(itemId);
           fromItems.splice(itemId, 1);
         }
       }
@@ -101,7 +112,7 @@ const Home = () => {
       <section id="cardboards-list">
         {cardBoards.map((cardBoard, index) => (
           <div key={cardBoard.id}>
-            <CardBoard cardBoard={cardBoard} idDel={index} addCard={addCard} deleteCard={deleteCard} deleteCardBoard={deleteCardBoard} moveCard={moveCard} moveCardBoardDialog={moveCardBoardDialog} editCard={editCard} />
+            <CardBoard cardBoard={cardBoard} idDel={index} addCard={addCard} deleteCard={deleteCard} deleteCardBoard={deleteCardBoard} moveCard={moveCard} moveCardBoardDialog={moveCardBoardDialog} editCard={editCard} editCardBoard={editCardBoard} />
           </div>
         ))}
       </section>
