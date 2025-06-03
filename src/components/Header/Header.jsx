@@ -16,7 +16,7 @@ const Header = ({ addCardBoard }) => {
 
   return (
     <header id='header'>
-        <h1>Kanban do projeto</h1> 
+        <h1>VisualFlow</h1> 
         <button type='button' className='btn' onClick={() => cardBoardCreate()}>+ ADICIONAR OUTRO CARDBOARD</button>
     </header>
   );
